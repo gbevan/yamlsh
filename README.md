@@ -7,7 +7,10 @@ Go language and needed the practice, so...)
 Parse a yaml file and pass as environment variables to a script from `#!`.
 
 ## Build and install
+Requires GOPATH setup and this project cloned out to `src/`
 ```
+go get github.com/golang/dep/cmd/dep
+dep ensure -v --vendor-only
 go build && sudo cp yamlsh /usr/local/bin
 ```
 
