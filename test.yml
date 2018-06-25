@@ -1,0 +1,24 @@
+---
+VAR1: my var 1
+ARRAY1:
+  - val1
+  - val2
+
+DICT1:
+  NEST1:
+    NEST2: value of NEST2
+    Number: 100
+    FloatNum: 3.14
+    ARRAY2:
+      - an
+      - array
+
+    MultiLineGt: >
+      aaaaaaaaaaaaaaaaaaaaaa
+      bbbbbbbbbbbbbbbbbbbbbb
+      cccccccccccccccccccccc
+
+    MultiLinePp: |
+      aaaaaaaaaaaaaaaaaaaaaa
+      bbbbbbbbbbbbbbbbbbbbbb
+      cccccccccccccccccccccc
