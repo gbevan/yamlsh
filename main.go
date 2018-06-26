@@ -16,7 +16,7 @@ import (
 
 var envs []string
 
-// Recursively extact the yaml data structure into flattened environment vars
+// Recursively extract the yaml data structure into flattened environment vars
 func makeEnvs(m interface{}, prefix string) {
 	mm := reflect.ValueOf(m)
 	mk := mm.Type().Kind()
