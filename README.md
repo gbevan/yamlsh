@@ -1,10 +1,13 @@
 # yamlsh - YAML Parsed in `#!` for shell
 
 (I'm sure there is already a util out there that does this (I couldn't find one,
-though I didn't search very hard), but I'm learning the
+though admittedly I didn't search very hard), but I'm learning the
 Go language and needed the practice, so...)
 
 Parse a yaml file and pass as environment variables to a script from `#!`.
+
+You can download a prebuilt binary from the project's releases page
+[here](releases/).
 
 ## Build and install
 Requires GOPATH setup and this project cloned out to `src/`

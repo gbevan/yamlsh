@@ -68,20 +68,22 @@ func main() {
 		shell = yamlshshell
 	}
 
-	y, err := ioutil.ReadFile(yamlfileExp)
-	if err != nil {
-		panic(err)
-	}
+	if yamlfileExp != "" {
+		y, err := ioutil.ReadFile(yamlfileExp)
+		if err != nil {
+			panic(err)
+		}
 
-	// parse yaml into t
-	t := make(map[interface{}]interface{})
-	err = yaml.Unmarshal(y, &t)
-	if err != nil {
-		log.Fatalf("error: %v", err)
-	}
+		// parse yaml into t
+		t := make(map[interface{}]interface{})
+		err = yaml.Unmarshal(y, &t)
+		if err != nil {
+			log.Fatalf("error: %v", err)
+		}
 
-	// Convert to flattened env vars for shell
-	makeEnvs(t, prefix)
+		// Convert to flattened env vars for shell
+		makeEnvs(t, prefix)
+	}
 
 	cmd := exec.Command(shell, flag.Args()...)
 	cmd.Stdin = os.Stdin
@@ -89,7 +91,7 @@ func main() {
 	cmd.Stderr = os.Stderr
 	cmd.Env = envs
 
-	err = cmd.Run()
+	err := cmd.Run()
 	if err != nil {
 		panic(err)
 	}
