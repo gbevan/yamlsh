@@ -7,7 +7,7 @@ Go language and needed the practice, so...)
 Parse a yaml file and pass as environment variables to a script from `#!`.
 
 You can download a prebuilt binary from the project's releases page
-[here](releases/).
+[here](https://github.com/gbevan/yamlsh/releases/latest).
 
 ## Build and install
 Requires GOPATH setup and this project cloned out to `src/`
