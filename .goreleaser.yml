@@ -1,0 +1,6 @@
+builds:
+  - binary: yamlsh
+    goos:
+      - linux
+    goarch:
+      - amd64
